@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1 id="h1">SET</h1>
+    <div class="menu">
+        <div class="item user-manual">
+            <span><a href="https://fejlesztojatekvilag.hu/uploaded/set_magyar_szabaly.pdf"
+                    target="blank">Játékszabály</a></span>
+        </div>
+        <div class="item players">
+            <span id="Player-title">Játékosok száma</span>
+            <div class="player-settings" id="pSettings">
+                <input type="text" id="player-number" value="Játékos2">
+                <button id="addPlayer">hozzáad</button>
+                <button id="remPlayer">töröl</button>
+            </div>
+        </div>
+        <div class="item game-mode">
+            <span id="gamem-ode-title">Játékmód</span>
+            <div class="game-settings" id="Settings">
+                <input type="radio" id="practice" name="mode" value="practice">
+                <label for="practice">gyakorló</label><br>
+                <input type="radio" id="competition" name="mode" value="competition">
+                <label for="competition">verseny</label><br>
+                <div class="other-sett" id="other-sett">
+                    <input type="checkbox" id="setHelp" name="help1" value="is-set">
+                    <span>Van-e set</span><br>
+                    <input type="checkbox" id="findSetHelp" name="help2" value="where-set">
+                    <span>Hol a set</span><br>
+                    <input type="checkbox" id="addCardsHelp" name="help3" value="button">
+                    <span>külön gomb kiegészítés (alapból automatikus)</span><br>
+
+                </div>
+            </div>
+        </div>
+        <div class="start">
+            <a href="#" class="myButton" id="startBtn">START</a>
+        </div>
+        <div class="helpBtns-container">
+            <button class="helpBtn1" id="setHelpBtn">van-e SET?</button>
+            <button class="helpBtn2" id="findSetHelpBtn">Hol van SET?</button>
+        </div>
+        <div class="countdown-container">
+            <p>Idő: <span id="sec"></span> <span style="font-size: 1.5rem;">mp</span></p>
+        </div>
+    </div>
+
+    <div class="playersContainer">
+        <span class="bartitle">Játékosok</span>
+        <ul class="playersBar" id="players">
+            <li>Játékos1<span class="hidden">0</span><input placeholder="név" class="nameIn" type="text"></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="end-container" id="endDialog">
+        <div class="end-inner">
+            <p>JÁTÉK VÉGE NINCS TÖBB SET!</p>
+            <p></p>
+            <p></p>
+            <button id="confirmEndBtn" value="default">OK</button>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="table-container" id="table-div">
+            <table class="table-class" id="table">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="cards.js"></script>
+    <script type="module" src="player.js"></script>
+</body>
+
+</html>
